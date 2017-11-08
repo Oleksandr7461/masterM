@@ -7766,8 +7766,8 @@ Table of Content
   border-radius: 50%;
   width: 140px;
   height: 140px;
-  margin-top: 70px;
-  margin-left: 46px;
+  /*margin-top: 70px;
+      margin-left: 46px;*/
 }
 .coment-item .description {
   text-align: center;
