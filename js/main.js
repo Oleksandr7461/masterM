@@ -878,19 +878,63 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 
 
 $(function() {
- /* 
-  $('.navbar-collapse').on('click', 'a', function (e) {
+  
+  /* add class active
+  ========================*/
+  $("#js-nav li").click(function(e) {
+    e.preventDefault();
+    $("#js-nav li").removeClass('active');
+    $(this).addClass('active');
+  });
+  
+  
+  /* smooth scroll to the block
+  ===============================*/
+  $("#js-nav li a").on("click", function(e) {
+    
+    e.preventDefault();
+    
+    var currentBlock = $(this).attr("href"),
+        currentBlockOffset = $(currentBlock).offset().top;
+    
+      $("html, body").animate({
+        scrollTop: currentBlockOffset + 8
+      }, 3000);
+  });
+  
+  /*(window).resize(function() {
+    if(document.documentElement.clientWidth > 992) {
+
+      $("#js-nav li a").on("click", function(e) {
+      e.preventDefault();
+      var currentBlock = $(this).attr("href"),
+          currentBlockOffset = $(currentBlock).offset().top;
+
+      $("html, body").animate({
+          scrollTop: currentBlockOffset
+        }, 3000);
+      });
+    }
+  });*/
+  
+  
+  
+ 
+  /* hidden menu bootstrap on click
+  ==============================*/
+  
+  /*$('.navbar-collapse').on('click', 'a', function (e) {
     $(e.delegateTarget).collapse('toggle');
   });
-  */
   
-  /*
-      $('a[data-target^="anchor"]').on('click', function () {
-            $('.navbar-collapse').collapse('hide');
-            $a = $($(this).attr('href'));  
-            return false;
-        });
-  */
+  
+  $('a[data-target^="anchor"]').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+      $a = $($(this).attr('href'));  
+      return false;
+  });*/
+  
+  
   
   $('#carousel').elastislide({
     // sliding speed
@@ -921,6 +965,28 @@ $(function() {
       
     });
   
-     
+  
+  /* scroll to top
+  ==============================*/
+    var limit  = $(window).height()/3,
+	$backToTop = $('#back-to-top');
+  
+    $(window).scroll(function () {
+        if ( $(this).scrollTop() > limit ) {
+            $backToTop.fadeIn();
+        } else {
+            $backToTop.fadeOut();
+        }
+    });
+    // scroll body to 0px on click
+    $backToTop.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 3000);
+        return false;
+    });
+
+  
+  
   
 });(jQuery);

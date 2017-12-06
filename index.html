@@ -47,7 +47,7 @@
 
 <header class="container">
    <div class="row">
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle  collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
@@ -67,13 +67,13 @@
       </a>-->
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right" id="js-nav">
             
-            <li class="active"><a href="#">Приимущества</a></li>
-            <li><a href="#">Услуги</a></li>                     
-            <li><a href="#">Портфолио</a></li>                     
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li ><a href="#js-clients">Приимущества</a></li><!--class="active"-->
+            <li><a href="#js-services">Услуги</a></li>                     
+            <li><a href="#js-portfolio">Портфолио</a></li>                     
+            <li><a href="#js-coments">Отзывы</a></li>
+            <li><a href="#js-contact">Контакты</a></li>
           </ul>
           
         </div>
@@ -82,7 +82,7 @@
     </div>
 </header>
   
-  <section class="stn-slogan container">
+  <section class="stn-slogan container" >
       <div class="row">
         <div class="col-md-6">
           <h1>Монтаж систем отопление и водопровода<br> Москва и Московская область</h1>
@@ -115,7 +115,7 @@
       </div><!--./row-->
   </section><!--/.stn-slogan-->
   
-  <section class="stn-clients container blue edge--bottom--reverse">
+  <section class="stn-clients container-fluid blue edge--bottom--reverse" id="js-clients">
       <div class="row">
         <h3 class="stn-clients-title stn-title">Почему клиенты выбирают нас?</h3>
       </div>  
@@ -128,9 +128,9 @@
                  <img src="i/calc.jpg" class="img-circle">
                </div>
                <div class="client-info">
-                 <h4>Бесплатный разчет сметы</h4>
-                 <p>Бесплатный расчет стоимости и составление сметы. Платите только за оборудование и монтаж!</p>
-               </div>
+                  <h4>Бесплатный разчет сметы</h4>
+                  <p>Бесплатный расчет стоимости и составление сметы. Платите только за оборудование и монтаж!</p>
+                </div>
             </div><!--/.client-card-->
             
             <div class="client-card bg-client-2">
@@ -168,11 +168,11 @@
   </section><!--/.stn-clients-->
   
   
-    <section class="stn-services container berry edge--top ">
+  <section class="stn-services container berry edge--top " id="js-services">
       <div class="row">
         <h3 class="stn-services-title stn-title">Наши услуги</h3>
       </div>  
-        <div class="container">
+        <!--<div class="container">-->
          
           <div class="services">
            
@@ -244,7 +244,7 @@
                </div>
             </div><!--/.client-card-->
           </div><!--/.client-->
-        </div><!--/.container-->
+      <!--  </div>--><!--/.container-->
   </section><!--/.stn-clients-->  
   
   
@@ -252,7 +252,7 @@
       <div class="row">
         <h3 class="stn-services-title stn-title">Работаем с крупными поставщиками - Лидерами на рынке отопительного оборудования</h3>
       </div>  
-        <div class="container">
+        <!--<div class="container">-->
           <ul id="carousel" class="elastislide-list">
             <li><a href="#"><img src="i/bosch.png" alt=""/></a></li>
             <li><a href="#"><img src="i/purmo.png" alt=""/></a></li>
@@ -267,11 +267,11 @@
             <li><a href="#"><img src="i/bosch.png" alt=""/></a></li>
             <li><a href="#"><img src="i/purmo.png" alt=""/></a></li>
           </ul>
-        </div>
+        <!--</div>-->
     
   </section><!--/.stn-slider-->
   
-  <section class="stn-work container">
+  <section class="stn-work container-fluid">
       <div class="row">
         <h3 class="stn-work-title stn-title">Схема работи</h3>
       </div>  
@@ -320,14 +320,14 @@
                 </div>
               </div>
           </div>
-        </div><!--/.container-->
+      </div><!--/.container-->
   </section><!--/.stn-work-->
   
   <section class="stn-will-contact container">
       <div class="row">
         <h3 class="stn-will-title stn-title">Оставьте заявку - менеджер свяжется с Вами</h3>
       </div>  
-    <div class="container">
+    <!--<div class="container">-->
       <div class="row">
         <div class="col-md-12 ">
           <div class="section-form ">
@@ -351,15 +351,14 @@
           </div><!--/.section-form-->
 		</div>
       </div>
-    </div><!--/.container-->
+   <!-- </div>--><!--/.container-->
   </section><!--/.stn-will-contact-->
   
-  
-  <section class="stn-portfolio container">
+  <section class="stn-portfolio container" id="js-portfolio">
       <div class="row">
         <h3 class="stn-portfolio-tittle stn-title">Портфолио выполненых работ</h3>
       </div>  
-        <div class="container">
+       <!-- <div class="container">-->
           <div class="row">
            
             <div id="js-lightgallery">
@@ -419,14 +418,14 @@
             </div>
 
          </div><!--/.row-->
-        </div><!--/.container-->
+        <!--</div>--><!--/.container-->
   </section><!--/.stn-portfolio-->
   
-  <section class="stn-coments container">
+  <section class="stn-coments container" id="js-coments">
       <div class="row">
         <h3 class="stn-coments-title stn-title">Отзывы клиентов</h3>
       </div>  
-    <div class="container">
+    <!--<div class="container">-->
       <div class="row">
        
         <div id="js-coments-slide">
@@ -449,7 +448,7 @@
               </div>
               <div class="description ">
                 <h5 class="coment-title">Денис Аркадиевич, 35лет, строитель2</h5>
-                <p class="coment-text">Долго выбирал и изучал различные системы отопления теплого пола. В моём старом доме теплые полы работали от электросети. Затраты на электричество были будь здоров. Когда переехал в собственное жильё долго думал стоит ли ставить теплый пол с питанием от электросети. После дотошного и изучения всех вариантов систем отопления, всё же выбрал тёплый пол на бетонном основании и нанял ребят из компании «Автономны инженерные системы» . Благодарю ребят за профессионализация — это совершенно разные системы! Благодаря их и грамотному подбору оборудования уже сэкономил около 50 000 на электричестве и отоплении, а ещё года не прошло.</p>
+                <p class="coment-text">Долго выбирал и изучал различные системы отопления теплого пола. В моём старом доме теплые полы работали от электросети. Затраты на электричество были будь здоров. Когда переехал в собственное жильё долго думал стоит ли ставить теплый пол с питанием от электросети. </p>
               </div>
             </div><!--/.coment-item-->
           </div>
@@ -460,23 +459,23 @@
               </div>
               <div class="description ">
                 <h5 class="coment-title">Денис Аркадиевич, 35лет, строитель3</h5>
-                <p class="coment-text">Долго выбирал и изучал различные системы отопления теплого пола. В моём старом доме теплые полы работали от электросети. Затраты на электричество были будь здоров. Когда переехал в собственное жильё долго думал стоит ли ставить теплый пол с питанием от электросети. После дотошного и изучения всех вариантов систем отопления, всё же выбрал тёплый пол на бетонном основании и нанял ребят из компании «Автономны инженерные системы» . Благодарю ребят за профессионализация — это совершенно разные системы! Благодаря их и грамотному подбору оборудования уже сэкономил около 50 000 на электричестве и отоплении, а ещё года не прошло.</p>
+                <p class="coment-text">Долго выбирал и изучал различные системы отопления теплого пола. В моём старом доме теплые полы работали от электросети. Затраты на электричество были будь здоров. Когда переехал в собственное жильё долго думал стоит ли ставить теплый пол с питанием от электросети. После дотошного и изучения всех вариантов систем отопления, всё же выбрал тёплый пол на бетонном основании и нанял ребят из компании «Автономны инженерные системы». </p>
               </div>
             </div><!--/.coment-item-->
           </div>
         </div><!--/.coments-->
         
       </div><!--/.row-->
-    </div><!--/.container-->
+    <!--</div>--><!--/.container-->
     
   </section><!--/.stn-coments-->
   
-  <section class="stn-contact container">
+  <section class="stn-contact container" id="js-contact">
       <div class="row">
         <h3 class="stn-contact-title">Остались вопросы?</h3>
-        <p>Звоните и мы все обсидим</p>
+        <p>Звоните и мы все обсудим!!!</p>
       </div>  
-    <div class="container">
+    <!--<div class="container">-->
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
          
@@ -493,9 +492,13 @@
           
         </div><!--col-md-6 col-md-offset-3-->
       </div>
-    </div>
+   <!-- </div>-->
   </section><!--/.stn-contact-->
 
+     <!--  Back to top button -->
+    <div id="back-to-top">
+      <i class="fa fa-chevron-up"></i>
+    </div><!--/#Back to top button-->
 
 
 

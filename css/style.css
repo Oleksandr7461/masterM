@@ -36,22 +36,24 @@
 }
 .stn-title,
 .stn-will-title {
-  font-size: 38px;
-  line-height: 70px;
+  font-size: 32px;
+  line-height: 40px;
   text-transform: uppercase;
   text-align: center;
   color: #005580;
   font-family: "ArsenalBold", sans-serif;
   font-weight: 700;
-}
-.stn-title:before {
-  content: '';
-  width: 100px;
-  height: 7px;
-  background-color: #65ca58;
-  position: absolute;
-  top: -3%;
-  left: 46%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  /*&:before{
+      content:'';
+      width: 100px;
+      height: 7px;
+      background-color: @title-line-color;
+      position: absolute;
+      top: -3%;
+      left: 46%;
+    }*/
 }
 /* Custom Elastislide Styling */
 
@@ -1266,7 +1268,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   cursor: pointer;
 }
 .slick-prev {
-  left: -25px;
+  left: 0px;
 }
 .slick-next {
   right: 0;
@@ -1279,7 +1281,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 .slick-dots {
   position: absolute;
-  bottom: -25px;
+  bottom: 15px;
   list-style: none;
   display: block;
   text-align: center;
@@ -4934,6 +4936,89 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     bottom: 20px;
   }
 }
+/*color navbar*/
+/* цвет фона и рамки навигационного меню */
+.navbar-default {
+    background-color:  #12649b;
+    border-color:  #61bbf7;
+}
+/* цвет текста, содержащий название сайта или бренда */
+.navbar-default .navbar-brand {
+    color: #f0f3f5;
+}
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #a6a6a6;
+}
+/* Цвет пунктов навигационного меню */
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #e3a1a1;
+}
+/* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #e3a1a1;
+    background-color: #1885cd;
+}
+/* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #b1b2b3;
+    background-color: #0099ff;
+}
+/* Цвет стрелочки (треугольничка) у раскрывающихся пунктов меню */
+/*.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #ecf0f1;
+    border-bottom-color: #ecf0f1;
+}*/
+/* Цвет стрелочки (треугольничка) при поднесении к нему курсора мышки или при его нахождении в фокусе */
+/*.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #d1ffed;
+    border-bottom-color: #d1ffed;
+}*/
+/* Цвет стрелочки (треугольничка), открывшегося пункта меню */
+/*.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #d1ffed;
+    border-bottom-color: #d1ffed;
+}*/
+
+/* CSS стили для мобильных устройств */
+/* Цвет рамки у кнопки, которая открывает меню */
+.navbar-default .navbar-toggle {
+    border-color: #000000;
+}
+/* Цвет фона кнопки (которая открывает меню) при поднесении к ней курсора мышки или при нахождении её в фокусе */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #1885cd;
+}
+/* Цвет полосочек в кнопочке, которая открывает меню */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+/* Цвет пунктов меню в раскрывающихся списках */
+/*@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #b1b2b3;;
+  }*/
+/* Цвет и фон пункта меню в раскрывающихся списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
+ /*   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #d1ffed;
+        background-color: #27ae60;
+    }
+}*/
 html,
 body {
   height: 100%;
@@ -4942,10 +5027,13 @@ body {
   font-family: "ArianAMUSerifRegular";
   font-size: 2.1em;
   color: #000000;
-  background: #ffffff;
+  /*background: @bg-body;*/
   position: relative;
+  background: url("../i/bg-body.jpg");
+  background-repeat: repeat;
   /*min-width: 370px;*/
   /*padding-bottom: 70px;// для меню bootstrap*/
+  /*background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);*/
 }
 /*ul, ol {
     list-style: none;
@@ -7236,13 +7324,14 @@ Table of Content
   background-image: url(../i/bg-slogan.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: .7;
+  /*opacity: .7;*/
 }
 .stn-slogan h1 {
   text-align: center;
   color: #e6e600;
   font-size: 42px;
-  padding-top: 90px;
+  padding-top: 50px;
+  padding-left: 30px;
   padding-bottom: 50px;
   line-height: 1.7;
   /*z-index: 1000;*/
@@ -7251,7 +7340,7 @@ Table of Content
   /*position: relative;*/
   max-width: 400px;
   margin: 30px auto 0;
-  background: #3366ff;
+  background: #1885cd;
   /*background:  #41ade5;*/
   border-radius: 5px;
   margin-bottom: 40px;
@@ -7274,22 +7363,22 @@ Table of Content
 .decor .form-inner .form-group {
   /*position: relative;*/
 }
-.decor .form-inner .form-group .user .fa-user {
-  font-size: 26px;
+.decor .form-inner .form-group .user {
+  font-size: 24px;
   font-family: FontAwesome;
   content: "\f007";
   position: absolute;
-  top: 4px;
-  left: 5px;
+  top: 6px;
+  left: 30px;
   z-index: 1;
 }
-.decor .form-inner .form-group .phone .fa-phone {
-  font-size: 26px;
+.decor .form-inner .form-group .phone {
+  font-size: 24px;
   font-family: FontAwesome;
   content: "\f095";
   position: absolute;
-  top: 14px;
-  left: 31px;
+  top: 7px;
+  left: 30px;
   z-index: 1;
 }
 .form-inner .form-group input[type="text"],
@@ -7307,6 +7396,7 @@ Table of Content
   color: #000;
   font-family: "ArianAMUSerifRegular";
   margin-left: 17px;
+  height: 44px;
 }
 .form-inner button[type="submit"] {
   display: inline-block;
@@ -7350,7 +7440,7 @@ Table of Content
   margin-bottom: 80px;
   /*position: relative;*/
   /*border: 2px solid red;*/
-  /*background-image: url(../i/bg-clients.jpg);
+  /* background-image: #b3b3b3 url(../i/twoun.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: .7;*/
@@ -7423,7 +7513,7 @@ Table of Content
   text-align: center;
   margin-top: -75px;
 }
-.client-card .client-image img {
+.client-card img {
   -webkit-box-shadow: 4px 3px 5px 0px rgba(50, 50, 50, 0.8);
           box-shadow: 4px 3px 5px 0px rgba(50, 50, 50, 0.8);
 }
@@ -7446,7 +7536,7 @@ Table of Content
   margin-top: 30px;
 }
 .client-card .client-info p {
-  min-height: 180px;
+  min-height: 225px;
   text-align: center;
   background: #f0f1f1;
   color: #7F7F7F;
@@ -7514,11 +7604,11 @@ Table of Content
   -webkit-box-flex: 1;
       -ms-flex: 1 18%;
           flex: 1 18%;
-  border: 1px solid red;
+  border: 1px solid #ffffff;
   -webkit-box-shadow: 4px 4px 7px 0px rgba(255, 255, 255, 0.7);
           box-shadow: 4px 4px 7px 0px rgba(255, 255, 255, 0.7);
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /*margin-top: 20px;*/
+  margin-bottom: 40px;
   /*&.bg-client-1{
     background: @bg-client-1;
   }
@@ -7538,6 +7628,7 @@ Table of Content
   /*margin-top: -75px;*/
 }
 .services-card .services-image img {
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   /*box-shadow: 4px 3px 5px 0px rgba(50, 50, 50, 0.8);*/
@@ -7583,6 +7674,7 @@ Table of Content
 ================*/
 .stn-slider {
   position: relative;
+  background: #9fdfbf;
   /*background-image: url(../i/bg-clients.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -7597,18 +7689,19 @@ Table of Content
   right: 0;
 }
 .elastislide-wrapper {
-  padding: 25px 40px;
+  padding: 20px 45px;
   -webkit-box-shadow: none;
           box-shadow: none;
+  margin: 30px;
 }
 .elastislide-wrapper nav span {
-  background: #d1d1d1 url(../i/nav.png) no-repeat 3px 3px;
+  background: #66b3ff url(../i/nav.png) no-repeat 3px 3px;
 }
 .elastislide-wrapper nav span:hover {
   opacity: 1;
 }
 .elastislide-horizontal {
-  padding: 25px 40px;
+  padding: 10px 30px;
 }
 .elastislide-list {
   background: #ffffff;
@@ -7619,20 +7712,24 @@ Table of Content
 ================*/
 .stn-work {
   position: relative;
-  /*background-image: url(../i/bg-clients.jpg);
+  /*background: #A6A6FF;*/
+  /*background-color: #000;
+  background-image: url(../i/twoun.jpg);
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  opacity: .7;*/
+  background-attachment: fixed;*/
+  /*opacity: .3;*/
   margin-bottom: 80px;
 }
 .stn-work-title {
   margin-bottom: 30px;
 }
 .work {
-  position: relative;
-  outline: 1px solid red;
+  border: 1px solid #0073e6;
   margin-bottom: 25px;
   background: #b3d9ff;
+  border-radius: 20px;
 }
 .work .work-img {
   text-align: center;
@@ -7646,7 +7743,7 @@ Table of Content
   min-height: 180px;
   text-align: center;
   color: #1a1a1a;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 32px;
   font-family: "ArianAMUSerifRegular";
   font-weight: 300;
@@ -7674,7 +7771,7 @@ Table of Content
   background: #cccccc;
   padding: 40px;
   border-radius: 2px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 .form-group {
   position: relative;
@@ -7721,13 +7818,14 @@ Table of Content
 /*      stn-portfolio
 =========================*/
 .stn-portfolio {
-  background: #88cc00;
+  /* background: #88cc00;*/
+  background: #77b300;
   position: relative;
   /*background-image: url(../i/bg-clients.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: .7;*/
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .stn-portfolio #js-lightgallery {
   text-align: center;
@@ -7789,6 +7887,7 @@ Table of Content
   /*font-family: @font-family;*/
   font-weight: 500;
   line-height: 2;
+  margin-bottom: 30px;
 }
 /*      /.stn-coments
 =========================*/
@@ -7848,6 +7947,31 @@ Table of Content
 }
 /*      /.stn-contact
 =========================*/
+#back-to-top {
+  position: fixed;
+  z-index: 999;
+  display: none;
+  bottom: 70px;
+  right: 15px;
+  cursor: pointer;
+}
+#back-to-top .fa-chevron-up {
+  width: 50px;
+  height: 50px;
+  display: block;
+  color: #c9c9c9;
+  background: #48a9ea;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  border: 1px solid #ccc;
+}
+#back-to-top .fa-chevron-up:hover {
+  background: #12649b;
+  color: #a6a6a6;
+}
 /* Pages import
 ==============================*/
 /*===========================
@@ -7883,14 +8007,18 @@ Table of Content
     -webkit-box-flex: 1;
         -ms-flex: 1 48%;
             flex: 1 48%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
-  .slick-dotted .slick-prev {
+  .client-card .client-info p {
+    min-height: 180px;
+  }
+  /*.slick-dotted .slick-prev{
     left: 0;
   }
   .slick-dotted .slick-next {
     right: 0;
   }
+  */
 }
 /* Small devices (tablets, 768px and down) */
 @media only screen and (max-width: 800px) {
@@ -7906,6 +8034,10 @@ Table of Content
   .navbar-header .navbar-brand {
     margin-right: 20px;
   }
+  .stn-title,
+  .stn-will-title {
+    font-size: 1.4em;
+  }
   .work p {
     min-height: 80px;
   }
@@ -7917,6 +8049,9 @@ Table of Content
   }
   .navbar-header .phone-navbar {
     /*margin-left: 115px*/
+  }
+  .client-card .client-info p {
+    min-height: 180px;
   }
 }
 /* Small devices (tablets, 768px and down) */
@@ -7930,6 +8065,9 @@ Table of Content
     -webkit-box-flex: 1;
         -ms-flex: 1 98%;
             flex: 1 98%;
+  }
+  .services-card .services-info h4 {
+    min-height: 40px;
   }
 }
 /* Medium devices (desktops, 480px and down) */
